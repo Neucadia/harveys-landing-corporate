@@ -291,7 +291,7 @@ export default function IndexSectionHeaders1() {
                   </div>
                   <ReactNestedMenu
                     navParentClassname="hidden flex items-center gap-2"
-                    navTopLevelParentClassname="flex items-start gap-2"
+                    navTopLevelParentClassname="hidden lg:flex items-start gap-2"
                     navChildClassname=""
                     linkTransformer={linkTransformer}
                     menuData={menu}
