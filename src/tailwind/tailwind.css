@@ -33,3 +33,12 @@
 .custom-inline-radio-1:checked + span svg {
   @apply block;
 }
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
