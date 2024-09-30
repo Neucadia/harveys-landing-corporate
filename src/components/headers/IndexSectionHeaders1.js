@@ -1,4 +1,199 @@
 import React from "react";
+import { ReactNestedMenu } from "react-nested-menu";
+const menu = [
+  {
+    id: 1,
+    title: "Home",
+    url: "/",
+  },
+  {
+    id: 2,
+    title: "Store",
+    url: "/#",
+    children: [
+      {
+        id: 3,
+        title: "Men",
+        url: "/#",
+      },
+      {
+        id: 4,
+        title: "Women",
+        url: "/#",
+      },
+      {
+        id: 5,
+        title: "Kids",
+        url: "/#",
+      },
+      {
+        id: 6,
+        title: "Footwear",
+        url: "/#",
+      },
+      {
+        id: 7,
+        title: "Pet",
+        url: "/#",
+      },
+      {
+        id: 8,
+        title: "Brands",
+        url: "/#",
+      },
+      {
+        id: 9,
+        title: "Events",
+        url: "/#",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Seed",
+    url: "/#",
+    children: [
+      {
+        id: 3,
+        title: "Corn",
+        url: "/#",
+      },
+      {
+        id: 4,
+        title: "Soybeans",
+        url: "/#",
+      },
+      {
+        id: 5,
+        title: "Wheat",
+        url: "/#",
+      },
+      {
+        id: 6,
+        title: "Cover Crop",
+        url: "/#",
+      },
+      {
+        id: 7,
+        title: "Pasture Mix",
+        url: "/#",
+      },
+      {
+        id: 8,
+        title: "Food Plot",
+        url: "/#",
+      },
+    ],
+  },
+  {
+    title: "Feed",
+    url: "/#",
+    children: [
+      {
+        id: 3,
+        title: "Equine",
+        url: "/#",
+      },
+      {
+        id: 4,
+        title: "Swine",
+        url: "/#",
+      },
+      {
+        id: 5,
+        title: "Calf",
+        url: "/#",
+      },
+      {
+        id: 6,
+        title: "Sheep",
+        url: "/#",
+      },
+      {
+        id: 7,
+        title: "Goat",
+        url: "/#",
+      },
+      {
+        id: 8,
+        title: "Poultry",
+        url: "/#",
+      },
+      {
+        id: 9,
+        title: "Beef",
+        url: "/#",
+      },
+      {
+        id: 10,
+        title: "Dairy",
+        url: "/#",
+      },
+      {
+        id: 11,
+        title: "Pet",
+        url: "/#",
+      },
+      {
+        id: 12,
+        title: "Rabbit",
+        url: "/#",
+      },
+      {
+        id: 13,
+        title: "Lactation",
+        url: "/#",
+      },
+      {
+        id: 14,
+        title: "Full truckloads",
+        url: "/#",
+      },
+    ],
+  },
+  {
+    title: "Commodities",
+    url: "/#",
+    children: [
+      {
+        id: 8,
+        title: "About",
+        url: "/#",
+      },
+      {
+        id: 9,
+        title: "Products",
+        url: "/#",
+      },
+      {
+        id: 10,
+        title: "Team",
+        url: "/#",
+      },
+    ],
+  },
+  {
+    title: "Garden Center",
+    url: "/#",
+    children: [
+      {
+        id: 5,
+        title: "Hours (currently closed for the season)",
+        url: "/#",
+      },
+      {
+        id: 6,
+        title: "Fertilizer",
+        url: "/#",
+      },
+      {
+        id: 7,
+        title: "Soil",
+        url: "/#",
+      },
+    ],
+  },
+];
 
 export default function IndexSectionHeaders1() {
   React.useEffect(() => {
@@ -27,6 +222,42 @@ export default function IndexSectionHeaders1() {
       ref.current.pause();
     }
   };
+
+  const linkTransformer = (menuItem) => {
+    return (
+      <a
+        className="inline-block py-2 px-3 hover:bg-gray-100 group transition duration-200 rounded-full"
+        href={menuItem.url}
+        tabIndex={menuItem.id}
+      >
+        <div className="flex items-center gap-2">
+          <span className="text-white group-hover:text-black text-sm font-medium tracking-tight">
+            {menuItem.title}
+          </span>
+          {menuItem.children && (
+            <div className="text-white group-hover:text-black transition duration-200">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={17}
+                height={16}
+                viewBox="0 0 17 16"
+                fill="none"
+              >
+                <path
+                  d="M12.848 6L8.18132 10.6667L3.51465 6"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          )}
+        </div>
+      </a>
+    );
+  };
+
   return (
     <React.Fragment>
       <>
@@ -47,9 +278,9 @@ export default function IndexSectionHeaders1() {
                 <source src="bg.webm" type="video/webm" />
                 <source src="bg.mp4" type="video/mp4" />
               </video>
-              <nav className="relative p-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
+              <nav className="relative p-4 z-50">
+                <div className="flex items-start justify-between">
+                  <div className="flex items-start gap-3">
                     <a href="#" className="inline-block">
                       <img
                         className="h-7"
@@ -58,82 +289,13 @@ export default function IndexSectionHeaders1() {
                       />
                     </a>
                   </div>
-                  <ul className="hidden xl:flex items-center gap-2">
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block py-2 px-3 hover:bg-gray-100 group transition duration-200 rounded-full"
-                      >
-                        <div className="flex items-center gap-2">
-                          <span className="text-white group-hover:text-black text-sm font-medium tracking-tight">
-                            Products
-                          </span>
-                          <div className="text-white group-hover:text-black transition duration-200">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width={17}
-                              height={16}
-                              viewBox="0 0 17 16"
-                              fill="none"
-                            >
-                              <path
-                                d="M12.848 6L8.18132 10.6667L3.51465 6"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block py-2 px-3 hover:bg-gray-100 hover:text-black transition duration-200 text-white text-sm font-medium tracking-tight rounded-full"
-                      >
-                        Case Studies
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block py-2 px-3 hover:bg-gray-100 hover:text-black transition duration-200 text-white text-sm font-medium tracking-tight rounded-full"
-                      >
-                        Support
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block py-2 px-3 hover:bg-gray-100 group transition duration-200 rounded-full"
-                      >
-                        <div className="flex items-center gap-2">
-                          <span className="text-white group-hover:text-black text-sm font-medium tracking-tight">
-                            Resources
-                          </span>
-                          <div className="text-white group-hover:text-black transition duration-200">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width={17}
-                              height={16}
-                              viewBox="0 0 17 16"
-                              fill="none"
-                            >
-                              <path
-                                d="M12.848 6L8.18132 10.6667L3.51465 6"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
+                  <ReactNestedMenu
+                    navParentClassname="hidden flex items-center gap-2"
+                    navTopLevelParentClassname="flex items-start gap-2"
+                    navChildClassname=""
+                    linkTransformer={linkTransformer}
+                    menuData={menu}
+                  />
                   <a
                     href="#"
                     className="rounded-full border border-gray-200 bg-white px-5 py-3 h-14 hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 hidden xl:inline-flex items-center justify-center gap-2 transition duration-200"
