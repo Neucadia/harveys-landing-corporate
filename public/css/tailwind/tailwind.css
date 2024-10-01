@@ -956,17 +956,17 @@ video {
   left: 0;
 }
 
-li > ul {
+.nested li > ul {
   visibility: hidden;
   flex-direction: column;
 }
 
-li > a:focus ~ ul {
+.nested li > a:focus ~ ul {
   display: flex;
   visibility: visible;
 }
 
-li > a:hover > ul {
+.nested li > a:hover > ul {
   display: flex;
   visibility: visible;
 }

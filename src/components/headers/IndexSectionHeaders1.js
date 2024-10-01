@@ -258,6 +258,41 @@ export default function IndexSectionHeaders1() {
     );
   };
 
+  const drawerLinkTransformer = (menuItem) => {
+    return (
+      <a
+        className="inline-block py-2 px-3 hover:bg-gray-50 transition duration-200 rounded-full"
+        href={menuItem.url}
+        tabIndex={menuItem.id}
+      >
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-medium tracking-tight">
+            {menuItem.title}
+          </span>
+          {menuItem.children && (
+            <div className="text-white group-hover:text-black transition duration-200">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={17}
+                height={16}
+                viewBox="0 0 17 16"
+                fill="none"
+              >
+                <path
+                  d="M12.848 6L8.18132 10.6667L3.51465 6"
+                  stroke="black"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          )}
+        </div>
+      </a>
+    );
+  };
+
   return (
     <React.Fragment>
       <>
@@ -291,7 +326,7 @@ export default function IndexSectionHeaders1() {
                   </div>
                   <ReactNestedMenu
                     navParentClassname="hidden flex items-center gap-2"
-                    navTopLevelParentClassname="hidden lg:flex items-start gap-2"
+                    navTopLevelParentClassname="nested hidden lg:flex items-start gap-2"
                     navChildClassname=""
                     linkTransformer={linkTransformer}
                     menuData={menu}
@@ -354,7 +389,7 @@ export default function IndexSectionHeaders1() {
                     <a href="#" className="inline-block">
                       <img
                         className="h-7"
-                        src="consulty-assets/logos/consulty-logo2.svg"
+                        src="consulty-assets/logos/harveys-tiller-green.svg"
                         alt
                       />
                     </a>
@@ -379,78 +414,13 @@ export default function IndexSectionHeaders1() {
                       </svg>
                     </a>
                   </div>
-                  <ul className="flex flex-col gap-12 py-12">
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block py-2 px-3 hover:bg-gray-50 transition duration-200 rounded-full"
-                      >
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium tracking-tight">
-                            Products
-                          </span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={17}
-                            height={16}
-                            viewBox="0 0 17 16"
-                            fill="none"
-                          >
-                            <path
-                              d="M12.848 6L8.18132 10.6667L3.51465 6"
-                              stroke="black"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block py-2 px-3 hover:bg-gray-50 transition duration-200 text-sm font-medium tracking-tight rounded-full"
-                      >
-                        Case Studies
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block py-2 px-3 hover:bg-gray-50 transition duration-200 text-sm font-medium tracking-tight rounded-full"
-                      >
-                        Support
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block py-2 px-3 hover:bg-gray-50 transition duration-200 rounded-full"
-                      >
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium tracking-tight">
-                            Resources
-                          </span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={17}
-                            height={16}
-                            viewBox="0 0 17 16"
-                            fill="none"
-                          >
-                            <path
-                              d="M12.848 6L8.18132 10.6667L3.51465 6"
-                              stroke="black"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
+                  <ReactNestedMenu
+                    navParentClassname="hidden flex flex-col gap-1 py-1"
+                    navTopLevelParentClassname="nested flex flex-col gap-12 py-12"
+                    navChildClassname=""
+                    linkTransformer={drawerLinkTransformer}
+                    menuData={menu}
+                  />
                   <div className="flex flex-col gap-4">
                     <a
                       href="#"
