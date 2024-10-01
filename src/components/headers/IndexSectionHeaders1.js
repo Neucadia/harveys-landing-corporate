@@ -195,6 +195,23 @@ const menu = [
   },
 ];
 
+const logos = [
+  {
+    url: " consulty-assets/logos/harveys-tiller-white.svg",
+  },
+  {
+    url: " consulty-assets/logos/harveys-script-white.svg",
+  },
+];
+const logosDark = [
+  {
+    url: " consulty-assets/logos/harveys-tiller-green.svg",
+  },
+  {
+    url: " consulty-assets/logos/harveys-script-green.svg",
+  },
+];
+
 export default function IndexSectionHeaders1() {
   React.useEffect(() => {
     var promise = ref.current.play();
@@ -213,6 +230,8 @@ export default function IndexSectionHeaders1() {
   const [isPlaying, setIsPlaying] = React.useState(false);
   const [navOpen, setNavOpen] = React.useState(false);
   const ref = React.useRef(null);
+  const [logoURL, setLogoURL] = React.useState(logos[0].url);
+  const [logoURLDark, setLogoURLDark] = React.useState(logosDark[0].url);
   const handleClick = () => {
     const nextIsPlaying = !isPlaying;
     setIsPlaying(nextIsPlaying);
@@ -316,12 +335,17 @@ export default function IndexSectionHeaders1() {
               <nav className="relative p-4 z-50">
                 <div className="flex items-start justify-between">
                   <div className="flex items-start gap-3">
-                    <a href="#" className="inline-block">
-                      <img
-                        className="h-7"
-                        src="https://static.shuffle.dev/uploads/files/70/705770af5df1978202fa665db13807b68dda6f51/harveys-tiller-white.svg"
-                        alt
-                      />
+                    <a
+                      href="#"
+                      className="inline-block"
+                      onClick={() =>
+                        setLogoURL(
+                          logos[logos.findIndex((logo) => logo.url !== logoURL)]
+                            .url
+                        )
+                      }
+                    >
+                      <img className="h-7" src={logoURL} alt />
                     </a>
                   </div>
                   <ReactNestedMenu
@@ -386,12 +410,20 @@ export default function IndexSectionHeaders1() {
                 <div className="fixed inset-0 bg-black opacity-20" />
                 <nav className="relative p-8 w-full h-full bg-white overflow-y-auto">
                   <div className="flex items-center justify-between">
-                    <a href="#" className="inline-block">
-                      <img
-                        className="h-7"
-                        src="consulty-assets/logos/harveys-tiller-green.svg"
-                        alt
-                      />
+                    <a
+                      href="#"
+                      className="inline-block"
+                      onClick={() =>
+                        setLogoURLDark(
+                          logosDark[
+                            logosDark.findIndex(
+                              (logo) => logo.url !== logoURLDark
+                            )
+                          ].url
+                        )
+                      }
+                    >
+                      <img className="h-7" src={logoURLDark} alt />
                     </a>
                     <a
                       href="#"
