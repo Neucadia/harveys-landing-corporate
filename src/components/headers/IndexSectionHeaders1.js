@@ -510,7 +510,7 @@ export default function IndexSectionHeaders1() {
             <div className="hidden md:block absolute bottom-8 right-8">
               <img
                 style={{ height: 200 }}
-                src="consulty-assets/headers/arrow-circle2.svg"
+                src="consulty-assets/leading.png"
                 alt
               />
             </div>
