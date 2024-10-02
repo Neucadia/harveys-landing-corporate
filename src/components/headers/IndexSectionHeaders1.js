@@ -227,7 +227,6 @@ export default function IndexSectionHeaders1() {
         });
     }
   }, []);
-  const [isPlaying, setIsPlaying] = React.useState(false);
   const [navOpen, setNavOpen] = React.useState(false);
   const ref = React.useRef(null);
   const [logoURL, setLogoURL] = React.useState(logos[0].url);

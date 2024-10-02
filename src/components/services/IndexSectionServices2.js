@@ -10,6 +10,7 @@ export default function IndexSectionServices2() {
           <p class="text-gray-900 tracking-tight mb-8 max-w-lg">
             Five flexible divisions to cover every acre of the ag landscape
           </p>
+          {/* eslint-disable-next-line */}
           <a href="#" className="group">
             {" "}
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
@@ -48,11 +49,12 @@ export default function IndexSectionServices2() {
                   className="hidden rounded-2xl object-cover"
                   style={{ height: 220 }}
                   src="consulty-assets/services/picture14.png"
-                  alt
+                  alt="Harvey's Commodities"
                 />{" "}
               </div>{" "}
             </div>
           </a>{" "}
+          {/* eslint-disable-next-line */}
           <a href="#" className="group">
             {" "}
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
@@ -90,11 +92,12 @@ export default function IndexSectionServices2() {
                   className="hidden rounded-2xl object-cover"
                   style={{ height: 220 }}
                   src="consulty-assets/services/picture13.png"
-                  alt
+                  alt="Harvey's Feed"
                 />{" "}
               </div>
             </div>
           </a>{" "}
+          {/* eslint-disable-next-line */}
           <a href="#" className="group">
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
               <div className="flex gap-7">
@@ -130,11 +133,12 @@ export default function IndexSectionServices2() {
                   className="hidden rounded-2xl object-cover"
                   style={{ height: 220 }}
                   src="consulty-assets/services/picture15.png"
-                  alt
+                  alt="Harvey's Seed"
                 />{" "}
               </div>
             </div>
           </a>{" "}
+          {/* eslint-disable-next-line */}
           <a href="#" className="group">
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
               <div className="flex gap-7">
@@ -170,11 +174,12 @@ export default function IndexSectionServices2() {
                   className="hidden rounded-2xl object-cover"
                   style={{ height: 220 }}
                   src="consulty-assets/services/picture12.jpg"
-                  alt
+                  alt="Harvey's Store"
                 />{" "}
               </div>
             </div>
           </a>{" "}
+          {/* eslint-disable-next-line */}
           <a href="#" className="group">
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
               <div className="flex gap-7">
@@ -210,7 +215,7 @@ export default function IndexSectionServices2() {
                   className="hidden rounded-2xl object-cover"
                   style={{ height: 220 }}
                   src="consulty-assets/services/picture16.png"
-                  alt
+                  alt="Harvey's Garden Center"
                 />{" "}
               </div>
             </div>
