@@ -232,15 +232,6 @@ export default function IndexSectionHeaders1() {
   const ref = React.useRef(null);
   const [logoURL, setLogoURL] = React.useState(logos[0].url);
   const [logoURLDark, setLogoURLDark] = React.useState(logosDark[0].url);
-  const handleClick = () => {
-    const nextIsPlaying = !isPlaying;
-    setIsPlaying(nextIsPlaying);
-    if (nextIsPlaying) {
-      ref.current.play();
-    } else {
-      ref.current.pause();
-    }
-  };
 
   const linkTransformer = (menuItem) => {
     return (
@@ -335,6 +326,7 @@ export default function IndexSectionHeaders1() {
               <nav className="relative p-4 z-50">
                 <div className="flex items-start justify-between">
                   <div className="flex items-start gap-3">
+                    {/* eslint-disable-next-line */}
                     <a
                       href="#"
                       className="inline-block"
@@ -345,7 +337,7 @@ export default function IndexSectionHeaders1() {
                         )
                       }
                     >
-                      <img className="h-7" src={logoURL} alt />
+                      <img className="h-7" src={logoURL} alt="Harvey's" />
                     </a>
                   </div>
                   <ReactNestedMenu
@@ -355,6 +347,7 @@ export default function IndexSectionHeaders1() {
                     linkTransformer={linkTransformer}
                     menuData={menu}
                   />
+                  {/* eslint-disable-next-line */}
                   <a
                     href="#"
                     className="rounded-full border border-gray-200 bg-white px-5 py-3 h-14 hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 hidden xl:inline-flex items-center justify-center gap-2 transition duration-200"
@@ -372,6 +365,7 @@ export default function IndexSectionHeaders1() {
                       <path d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79h1.51m9.86 12.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19M7.5 3H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57a.84.84 0 0 0-.31-.05c-.26 0-.51.1-.71.29l-2.2 2.2a15.149 15.149 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1z" />
                     </svg>
                   </a>
+                  {/* eslint-disable-next-line */}
                   <a
                     href="#"
                     className="xl:hidden"
@@ -410,6 +404,7 @@ export default function IndexSectionHeaders1() {
                 <div className="fixed inset-0 bg-black opacity-20" />
                 <nav className="relative p-8 w-full h-full bg-white overflow-y-auto">
                   <div className="flex items-center justify-between">
+                    {/* eslint-disable-next-line */}
                     <a
                       href="#"
                       className="inline-block"
@@ -423,8 +418,9 @@ export default function IndexSectionHeaders1() {
                         )
                       }
                     >
-                      <img className="h-7" src={logoURLDark} alt />
+                      <img className="h-7" src={logoURLDark} alt="Harvey's" />
                     </a>
+                    {/* eslint-disable-next-line */}
                     <a
                       href="#"
                       onClick={() => setNavOpen((prevState) => !prevState)}
@@ -454,12 +450,13 @@ export default function IndexSectionHeaders1() {
                     menuData={menu}
                   />
                   <div className="flex flex-col gap-4">
+                    {/* eslint-disable-next-line */}
                     <a
                       href="#"
                       className="rounded-full bg-black px-5 py-3 h-14 hover:bg-orange-600 focus:bg-orange-500 focus:ring-4 focus:ring-orange-200 inline-flex items-center justify-center gap-2 transition duration-200"
                     >
                       <span className="text-white text-sm font-semibold tracking-tight">
-                        Get A Free Consultation
+                        Call now
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -489,6 +486,7 @@ export default function IndexSectionHeaders1() {
                 Harvey's has grown from a single feed mill into a
                 multi-disciplinary group of direct-to-consumer and B2B ventures
               </p>
+              {/* eslint-disable-next-line */}
               <a
                 href="#"
                 className="rounded-full border border-gray-200 bg-white px-6 py-4 h-16 hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 inline-flex items-center justify-center gap-2 transition duration-200"
@@ -511,7 +509,7 @@ export default function IndexSectionHeaders1() {
               <img
                 style={{ height: 200 }}
                 src="consulty-assets/leading.png"
-                alt
+                alt="Leading"
               />
             </div>
           </div>

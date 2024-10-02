@@ -6,7 +6,10 @@ export default function IndexSectionServices2() {
       <>
         <section className="px-8 md:px-24 py-32">
           {" "}
-          <p className="tracking-tight text-gray-700 mb-32">Our brands</p>{" "}
+          <p className="tracking-tight text-gray-700 mb-32">Our brands</p>
+          <p class="text-gray-900 tracking-tight mb-8 max-w-lg">
+            Five flexible divisions to cover every acre of the ag landscape
+          </p>
           <a href="#" className="group">
             {" "}
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
