@@ -983,16 +983,16 @@ video {
   flex-direction: column;
 }
 
-.nested li > a:focus ~ ul {
+.nested li > a:focus ~ ul,
+.nested li > a:hover > ul {
   display: flex;
   visibility: visible;
   background-color: rgba(228, 228, 228, 0.5);
 }
 
-.nested li > a:hover > ul {
-  display: flex;
-  visibility: visible;
-  background-color: rgba(228, 228, 228, 0.5);
+.flex-col li > a:focus ~ ul,
+.flex-col li > a:hover > ul {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .group:hover img {
