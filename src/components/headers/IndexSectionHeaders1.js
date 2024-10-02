@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactNestedMenu } from "react-nested-menu";
+import Nav from "../nav/nav";
 const menu = [
   {
     id: 1,
@@ -337,13 +338,7 @@ export default function IndexSectionHeaders1() {
                       <img className="h-7" src={logoURL} alt="Harvey's" />
                     </a>
                   </div>
-                  <ReactNestedMenu
-                    navParentClassname="hidden flex items-center gap-2"
-                    navTopLevelParentClassname="nested hidden lg:flex items-start gap-2"
-                    navChildClassname=""
-                    linkTransformer={linkTransformer}
-                    menuData={menu}
-                  />
+                  <Nav />
                   {/* eslint-disable-next-line */}
                   <a
                     href="#"

@@ -845,6 +845,10 @@ video {
   padding-top: 20rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-heading {
   font-family: Plus Jakarta Sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -982,11 +986,13 @@ video {
 .nested li > a:focus ~ ul {
   display: flex;
   visibility: visible;
+  background-color: rgba(228, 228, 228, 0.5);
 }
 
 .nested li > a:hover > ul {
   display: flex;
   visibility: visible;
+  background-color: rgba(228, 228, 228, 0.5);
 }
 
 .group:hover img {
@@ -1069,13 +1075,11 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
-  .lg\:flex {
+@media (min-width: 1280px) {
+  .xl\:flex {
     display: flex;
   }
-}
 
-@media (min-width: 1280px) {
   .xl\:inline-flex {
     display: inline-flex;
   }

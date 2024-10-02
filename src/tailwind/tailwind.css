@@ -50,11 +50,13 @@ video {
 .nested li > a:focus ~ ul {
   display: flex;
   visibility: visible;
+  background-color: rgba(228, 228, 228, 0.5);
 }
 
 .nested li > a:hover > ul {
   display: flex;
   visibility: visible;
+  background-color: rgba(228, 228, 228, 0.5);
 }
 
 .group:hover img {
