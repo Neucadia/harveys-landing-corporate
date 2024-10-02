@@ -316,8 +316,6 @@ export default function IndexSectionHeaders1() {
                 poster="https://static.shuffle.dev/uploads/files/cc/cce6580999c8067e23bb4a662dea535a74b463e5/Screen-Shot-2024-09-12-at-12-19-20-PM.jpg"
                 id="bgvid"
                 ref={ref}
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
               >
                 <source src="bg.webm" type="video/webm" />
                 <source src="bg.mp4" type="video/mp4" />
