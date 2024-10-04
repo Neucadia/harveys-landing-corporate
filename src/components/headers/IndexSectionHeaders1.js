@@ -233,41 +233,6 @@ export default function IndexSectionHeaders1() {
   const [logoURL, setLogoURL] = React.useState(logos[0].url);
   const [logoURLDark, setLogoURLDark] = React.useState(logosDark[0].url);
 
-  const linkTransformer = (menuItem) => {
-    return (
-      <a
-        className="inline-block py-2 px-3 hover:bg-gray-100 group transition duration-200 rounded-full"
-        href={menuItem.url}
-        tabIndex={menuItem.id}
-      >
-        <div className="flex items-center gap-2">
-          <span className="text-white group-hover:text-black text-sm font-medium tracking-tight">
-            {menuItem.title}
-          </span>
-          {menuItem.children && (
-            <div className="text-white group-hover:text-black transition duration-200">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={17}
-                height={16}
-                viewBox="0 0 17 16"
-                fill="none"
-              >
-                <path
-                  d="M12.848 6L8.18132 10.6667L3.51465 6"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          )}
-        </div>
-      </a>
-    );
-  };
-
   const drawerLinkTransformer = (menuItem) => {
     return (
       <a
