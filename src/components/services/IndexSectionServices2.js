@@ -1,6 +1,17 @@
 import React from "react";
 
+const logos = [
+  {
+    name: "tiller",
+  },
+  {
+    name: "script",
+  },
+];
+
 export default function IndexSectionServices2() {
+  const [activeLogo, setActiveLogo] = React.useState(logos[0]);
+
   return (
     <React.Fragment>
       <>
@@ -11,7 +22,7 @@ export default function IndexSectionServices2() {
             Five flexible divisions to cover every acre of the ag landscape
           </p>
           {/* eslint-disable-next-line */}
-          <a href="#" className="group">
+          <a className="group">
             {" "}
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
               {" "}
@@ -20,9 +31,22 @@ export default function IndexSectionServices2() {
                 <p className="font-medium tracking-tight text-gray-400 group-hover:text-black transition duration-200">
                   01.
                 </p>{" "}
-                <h2 className="tracking-tight font-heading text-4xl md:text-6xl font-medium text-gray-400 group-hover:text-black transition duration-200">
-                  Harvey's Commodities
-                </h2>{" "}
+                {/* eslint-disable-next-line */}
+                <a
+                  onClick={() =>
+                    setActiveLogo(
+                      logos[
+                        logos.findIndex((logo) => logo.name !== activeLogo.name)
+                      ]
+                    )
+                  }
+                >
+                  <img
+                    src={`/consulty-assets/logos/harveys-${activeLogo.name}-commodities.png`}
+                    alt="Harvey's Commodities"
+                    className="opacity-70 group-hover:opacity-100 transition duration-200"
+                  />
+                </a>
               </div>{" "}
               <span className="text-orange-300 group-hover:text-orange-400 transition duration-200">
                 {" "}
@@ -55,7 +79,7 @@ export default function IndexSectionServices2() {
             </div>
           </a>{" "}
           {/* eslint-disable-next-line */}
-          <a href="#" className="group">
+          <a className="group">
             {" "}
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
               <div className="flex gap-7">
@@ -63,9 +87,22 @@ export default function IndexSectionServices2() {
                 <p className="font-medium tracking-tight text-gray-400 group-hover:text-black transition duration-200">
                   02.
                 </p>{" "}
-                <h2 className="tracking-tight font-heading text-4xl md:text-6xl font-medium text-gray-400 group-hover:text-black transition duration-200">
-                  Harvey's Feed
-                </h2>{" "}
+                {/* eslint-disable-next-line */}
+                <a
+                  onClick={() =>
+                    setActiveLogo(
+                      logos[
+                        logos.findIndex((logo) => logo.name !== activeLogo.name)
+                      ]
+                    )
+                  }
+                >
+                  <img
+                    src={`/consulty-assets/logos/harveys-${activeLogo.name}-feed.png`}
+                    alt="Harvey's Feed"
+                    className="opacity-70 group-hover:opacity-100 transition duration-200"
+                  />
+                </a>
               </div>{" "}
               <span className="text-orange-300 group-hover:text-orange-400 transition duration-200">
                 {" "}
@@ -98,16 +135,29 @@ export default function IndexSectionServices2() {
             </div>
           </a>{" "}
           {/* eslint-disable-next-line */}
-          <a href="#" className="group">
+          <a className="group">
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
               <div className="flex gap-7">
                 <p className="font-medium tracking-tight text-gray-400 group-hover:text-black transition duration-200">
                   03.
-                </p>{" "}
-                <h2 className="tracking-tight font-heading text-4xl md:text-6xl font-medium text-gray-400 group-hover:text-black transition duration-200">
-                  Harvey's Seed
-                </h2>{" "}
-              </div>{" "}
+                </p>
+                {/* eslint-disable-next-line */}
+                <a
+                  onClick={() =>
+                    setActiveLogo(
+                      logos[
+                        logos.findIndex((logo) => logo.name !== activeLogo.name)
+                      ]
+                    )
+                  }
+                >
+                  <img
+                    src={`/consulty-assets/logos/harveys-${activeLogo.name}-seed.png`}
+                    alt="Harvey's Seed"
+                    className="opacity-70 group-hover:opacity-100 transition duration-200"
+                  />
+                </a>
+              </div>
               <span className="text-orange-300 group-hover:text-orange-400 transition duration-200">
                 {" "}
                 <svg
@@ -139,15 +189,28 @@ export default function IndexSectionServices2() {
             </div>
           </a>{" "}
           {/* eslint-disable-next-line */}
-          <a href="#" className="group">
+          <a className="group">
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
               <div className="flex gap-7">
                 <p className="font-medium tracking-tight text-gray-400 group-hover:text-black transition duration-200">
                   04.
-                </p>{" "}
-                <h2 className="tracking-tight font-heading text-4xl md:text-6xl font-medium text-gray-400 group-hover:text-black transition duration-200">
-                  Harvey's Store
-                </h2>{" "}
+                </p>
+                {/* eslint-disable-next-line */}
+                <a
+                  onClick={() =>
+                    setActiveLogo(
+                      logos[
+                        logos.findIndex((logo) => logo.name !== activeLogo.name)
+                      ]
+                    )
+                  }
+                >
+                  <img
+                    src={`/consulty-assets/logos/harveys-${activeLogo.name}-store.png`}
+                    alt="Harvey's Store"
+                    className="opacity-70 group-hover:opacity-100 transition duration-200"
+                  />
+                </a>
               </div>{" "}
               <span className="text-orange-300 group-hover:text-orange-400 transition duration-200">
                 {" "}
@@ -180,15 +243,28 @@ export default function IndexSectionServices2() {
             </div>
           </a>{" "}
           {/* eslint-disable-next-line */}
-          <a href="#" className="group">
+          <a className="group">
             <div className="flex justify-between items-center py-8 relative border-t border-b border-black border-opacity-10">
               <div className="flex gap-7">
                 <p className="font-medium tracking-tight text-gray-400 group-hover:text-black transition duration-200">
                   05.
-                </p>{" "}
-                <h2 className="tracking-tight font-heading text-4xl md:text-6xl font-medium text-gray-400 group-hover:text-black transition duration-200">
-                  Harvey's Garden Center
-                </h2>{" "}
+                </p>
+                {/* eslint-disable-next-line */}
+                <a
+                  onClick={() =>
+                    setActiveLogo(
+                      logos[
+                        logos.findIndex((logo) => logo.name !== activeLogo.name)
+                      ]
+                    )
+                  }
+                >
+                  <img
+                    src={`/consulty-assets/logos/harveys-${activeLogo.name}-gc.png`}
+                    alt="Harvey's Garden Center"
+                    className="opacity-70 group-hover:opacity-100 transition duration-200"
+                  />
+                </a>
               </div>{" "}
               <span className="text-orange-300 group-hover:text-orange-400 transition duration-200">
                 {" "}
